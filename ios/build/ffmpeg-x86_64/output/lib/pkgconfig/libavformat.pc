@@ -1,0 +1,14 @@
+prefix=/Users/chengzongliang/Documents/ijkplayer-ios/ios/build/ffmpeg-x86_64/output
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 57.56.100
+Requires: libavcodec >= 57.64.100, libavutil >= 55.34.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -framework QuartzCore -framework CoreFoundation -framework VideoToolbox -framework CoreMedia -framework CoreVideo -framework CoreFoundation -framework AudioToolbox -framework CoreMedia -L/usr/local/lib -lSDL2 -L/usr/local/Cellar/fdk-aac/0.1.6/lib -lfdk-aac -lm -lbz2 -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}

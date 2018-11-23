@@ -1,0 +1,14 @@
+prefix=/Users/chengzongliang/Documents/ijkplayer-ios/ios/build/ffmpeg-arm64/output
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.65.100
+Requires: libswscale >= 4.2.100, libswresample >= 2.3.100, libavformat >= 57.56.100, libavcodec >= 57.64.100, libavutil >= 55.34.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -framework QuartzCore -framework CoreFoundation -framework VideoToolbox -framework CoreMedia -framework CoreVideo -framework CoreFoundation -framework AudioToolbox -framework CoreMedia -L/usr/local/Cellar/fdk-aac/0.1.6/lib -lfdk-aac -lm -lbz2 -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
